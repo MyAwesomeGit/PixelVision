@@ -19,12 +19,12 @@ struct ContentView: View {
                         .scaledToFit()
                         .frame(height: 300)
                 } else {
-                    Text("Select an image")
-                        .foregroundColor(.gray)
+                    Image(systemName: "photo.stack")
+                        .font(.system(size: 60))
                         .frame(height: 300)
                 }
                 
-                Button("Choose Image") {
+                Button("Select an image") {
                     showingImagePicker = true
                 }
                 .padding()
@@ -32,7 +32,7 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .cornerRadius(8)
                 
-                Text("Classification: \(classification)")
+                Text(classification)
                     .font(.headline)
                     .padding()
                 
